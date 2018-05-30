@@ -1,0 +1,36 @@
+https://careers.simplecast.com/Front-End-Developer
+
+Front-End Developer
+
+
+Audios Inc is seeking a Front-End Developer to join the Simplecast team; a self-motivated individual with a passion for clean, succinct, reusable code, who isn’t afraid to experiment.
+
+We’re reengineering Simplecast from the ground up. Everything. And nothing is sacred. You’ll be working directly with our Head of Platform and interfacing with our design, backend, and infrastructure teams. You’ll be writing UI code for our best-in-class admin tools, user sharing tools, analytics dashboard, and more. Experience in SaaS is a huge bonus.
+
+We’re looking for people who:
+
+3+ years of demonstrated development experience.
+Expertise in JavaScript (with a concentration in Vue.js or React), HTML, CSS, and Node.js tooling.
+Expertise working with RESTful APIs and single-page apps.
+Familiarity with at least one backend language, eg. PHP, Ruby, Python, GoLang... Our backend is written in Elixir. If you’ve got Elixir experience, massive bonus points!
+Familiarity with Git/Gitlab.
+Extremely self-motivated and manages time well, both with a team and remotely.
+Excellent problem solver with a knack for building industry-innovating tools, thinks beyond current trends.
+Bonus: Loves podcasts, and has the drive to innovate the industry.
+
+Nice to haves:
+
+Experience with UX design.
+Experience with various 3rd party integrations, eg. Mapbox, Stripe.
+Familiarity with AWS.
+CI/CD Workflow experience.
+
+Role, Location, Benefits:
+
+Full-time opportunity.
+Ideally NYC or Albany-based, but work from anywhere if you’re the right fit.
+Medical, dental, and vision benefits coverage. Generous benefit stipend. Generous PTO. 401K. A shiny, new Mac. Tiered budget for continued learning.
+
+If interested, please email your GitHub link, LinkedIn profile, and/or code samples, plus a cover letter, to work@simplecast.com.
+
+

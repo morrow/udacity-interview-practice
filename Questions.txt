@@ -48,4 +48,28 @@
    app.debug = True
    app.run()
 
+  -----------------------------
+
+  import random
+  from flask import Flask, jsonify
+
+  app = Flask(__name__)
+
+  @app.route('/')
+  def hello_world():
+   return 'Hello World!'
+
+  @app.route('/roll')
+  def roll_dice():
+    a = random.randint(1,6)
+    b = random.randint(1,6)
+    return jsonify([a,b])
+
+  if __name__ == '__main__':
+   app.debug = True
+   app.run()
+
+   This version adds a route at '/roll' that uses random's 'randint' method to generate two random integers within a given range (1-6 since we are simulating dice). The response is served as JSON using flask's jsonify method.
+
+
 6. If you were to start your full-stack developer position today, what would be your goals a year from now?
