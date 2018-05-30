@@ -1,0 +1,51 @@
+1. What is the most influential book or blog post you’ve read regarding web development?
+
+2. Tell me about a web application you have built. Why did you choose to build it? What did you learn? What challenges did you face and how did you overcome them?
+
+3. Write a function in Python that takes a list of strings and returns a single string that is an HTML unordered list (<ul>...</ul>) of those strings. You should include a brief explanation of your code. Then, what would you have to consider if the original list was provided by user input?
+
+  Initial Version:
+  def getUnorderedList(l):
+      return "<ul>%s</ul>" % ''.join(map(lambda x: "<li>%s</li>" % x, l))
+
+  The code uses string interpolation and the 'map' function to surround each list item with list item HTML tags and then surrounds the entire tagged list with the unordered list HTML tag.
+
+  User Input Version:
+  import cgi
+  def getUnorderedList(l):
+      return "<ul>%s</ul>" % ''.join(map(lambda x: "<li>%s</li>" % cgi.escape(x), l))
+
+  This version is the same as above, except it uses a library called 'cgi' to escape each list item. I chose to use a library instead of regex or some similar simple form of sanitizing input because sanitizing input is more complicated than it appears, and is serious if you get it wrong, so it's best to use an established library for this case.
+
+
+4. List 2-3 attacks that web applications are vulnerable to. How do these attacks work? How can we prevent those attacks?
+  XSRF or CSRF - Cross-Site-Request-Forgery
+  These attacks work by surreptitiously submitting requests to a website that the user has some kind of credentials with and that the application trusts.
+  We can prevent these attacks by generating tokens and providing them to the user for each page they visit, and disallow requests with an invalid token.
+
+  XSS - Cross-Site-Scripting
+  XSS is a vulnerability whereby an attacker injects client-side scripts into a user's web page. This is often seen when webpages use HTTP queries or other user inputted data when rendering a page, and do not properly sanitize this input.
+  We can prevent this by properly sanitizing user input both when it goes into our database and when it is rendered in the browser.
+
+  SQLi - SQL Injection
+  SQL Injection is a vulnerability similar to XSS whereby an attacker can gain access to a higher level of access to the back-end database than they are supposed to have. This can mean the attacker can run queries, exposing the structure of your database, and in some cases can lead to total compromiization of user data.
+  We can prevent this eliminating any direct user input into the database, instead opting for prepared statements or paramaterized queries, which will sanitize the input and disallow an injection attack.
+
+
+5. Here is some starter code for a Flask Web Application. Expand on that and include a route that simulates rolling two dice and returns the result in JSON. You should include a brief explanation of your code.
+
+  from flask import Flask
+  app = Flask(__name__)
+
+  import json
+  import random
+
+  @app.route('/')
+  def hello_world():
+   return 'Hello World!'
+
+  if __name__ == '__main__':
+   app.debug = True
+   app.run()
+
+6. If you were to start your full-stack developer position today, what would be your goals a year from now?
