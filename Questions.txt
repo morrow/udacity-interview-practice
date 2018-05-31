@@ -1,6 +1,8 @@
 1. What is the most influential book or blog post you’ve read regarding web development?
+  Paul Graham's essay entitled "Holding A Program In One's Head". In this Essay, Paul discusses his approach to programming in a way that enables you to understand the problem you are solving by keeping the program in your head. One approach to achieve this is to do what's called "bottom-up programming", where you write your program in multiple reusable layers, with each layer enabling a clean abstraction layer for the layer above it, thus only requiring you to keep the top-level layer in your head in order to reason about how your program works. He also suggests using succint languages where possible and keeping your program short so it is easier to keep in your head as well.
 
 2. Tell me about a web application you have built. Why did you choose to build it? What did you learn? What challenges did you face and how did you overcome them?
+  I built a web application using Ruby on Rails which featured a shared code editor for the purpose of pair programming. I built it using Rails 5 and Rails 5's ActionCable interface, which enables websocket connections in addition to the traditional RESTful interface rails uses. This enabled some useful features, such as seamlessly shared editing, where if I type something on screen A, my partner sees on screen B. As well as a simple JavaScript API powered chat system to go alongside the editor. The challenges I faced were that I had never used websockets before, and so implementing it was a challenge that required a lot of research and iterations to work.
 
 3. Write a function in Python that takes a list of strings and returns a single string that is an HTML unordered list (<ul>...</ul>) of those strings. You should include a brief explanation of your code. Then, what would you have to consider if the original list was provided by user input?
 
@@ -21,10 +23,13 @@
 4. List 2-3 attacks that web applications are vulnerable to. How do these attacks work? How can we prevent those attacks?
   XSRF or CSRF - Cross-Site-Request-Forgery
   These attacks work by surreptitiously submitting requests to a website that the user has some kind of credentials with and that the application trusts.
+  Example: An attacker uses an IMG tag to send a GET request to 'https://website.com/change-password?newpassword=attackerpass', which triggers website.com to change the user's password.
   We can prevent these attacks by generating tokens and providing them to the user for each page they visit, and disallow requests with an invalid token.
 
   XSS - Cross-Site-Scripting
   XSS is a vulnerability whereby an attacker injects client-side scripts into a user's web page. This is often seen when webpages use HTTP queries or other user inputted data when rendering a page, and do not properly sanitize this input.
+  Example: A website has user profiles without sanitized input. An attacker modifies their profile to include the following:
+  "This is my profile! <script>
   We can prevent this by properly sanitizing user input both when it goes into our database and when it is rendered in the browser.
 
   SQLi - SQL Injection
@@ -69,7 +74,8 @@
    app.debug = True
    app.run()
 
-   This version adds a route at '/roll' that uses random's 'randint' method to generate two random integers within a given range (1-6 since we are simulating dice). The response is served as JSON using flask's jsonify method.
+   This version adds a route at '/roll' that uses the 'random' library's 'randint' method to generate two psuedorandom integers within a given range (1-6 since we are simulating dice). The response is served as a JSON array using flask's jsonify method.
 
 
 6. If you were to start your full-stack developer position today, what would be your goals a year from now?
+  I would like to be solving difficult problems and building innovative software which helps users accomplish their goals. I would like to have contributed toward larger organizational projects, and if appropriate, lead development of a project or codebase. As I am new to Elixir, I would have it as a goal to be proficient and comfortable in it as well.
